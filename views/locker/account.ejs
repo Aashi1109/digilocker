@@ -1,0 +1,32 @@
+<% layout('layout/boilerplate') %>
+<section class="account">
+    <div class="account__heading">All Accounts</div>
+    <div class="account__line-break line-break"></div>
+    <div class="account__item pad-5">
+        <div class="account__text">Locker ID</div>
+        <div class="account__text">Primary User Image</div>
+        <div class="account__text">Primary User Name</div>
+        <div class="account__text">Secondary User Image</div>
+        <div class="account__text">Secondary User Name</div>
+        <div class="account__text">Edit Details</div>
+    </div>
+    <%for(const account of accounts){%>
+    <div class="account__item pad-5">
+        <div class="account__text"><%= account.lockerid %></div>
+        <img src="..\<%= account.p_img %>" alt="primary user image" class="account__image">
+        <div class="account__text"><%= account.primary.first %> <%= account.primary.middle %>
+            <%= account.primary.last %>
+        </div>
+
+        <img src="..\<%= account.s_img %>" alt="secondary user image" class="account__image">
+        <div class="account__text"><%= account.secondary.first %> <%= account.secondary.middle %>
+            <%= account.secondary.last %>
+        </div>
+        <div class="account__edit">
+            <div class="account__text mr-8">Edit</div>
+            <img src="svg/edit.svg" alt="edit logo" class="account__logo">
+        </div>
+    </div>
+    <% } %>
+
+</section>

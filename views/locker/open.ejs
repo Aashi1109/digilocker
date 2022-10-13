@@ -1,0 +1,49 @@
+<% layout('layout/boilerplate')%>
+<section class="open">
+    <h2 class="heading__primary full-span">Open Locker</h2>
+    <div class="line-break full-span"></div>
+    <div class="open__search full-span">
+        <input type="text" class="user__input open__search-input grey" placeholder="Enter Locker ID" required>
+        <button class="btn open__search-btn" type="button">Search LOCKER</button>
+        <div class="open__message hidden">Locker not found</div>
+    </div>
+    <div class="open__text full-span">Recognition Step</div>
+    <div class="line-break full-span"></div>
+    <div class="open__text open__text--medium full-span"><em>! Note: Try to place your face in view of
+            camera
+            for
+            recognition</em></div>
+
+    <button class="btn open__recognize--banker hidden">Start Banker Face Recognition</button>
+    <button class="btn open__recognize--user hidden">Start User Face Recognition</button>
+    <!-- <div class="open__recognize open__recognize--left hidden">
+        <div class="open__text--medium">Banker Face Recognition</div>
+
+        <div class="open__camera">
+            <img src="svg/video-camera.svg" alt="video logo" class="open__logo open__camera--initial">
+        </div>
+        <button class="btn open__btn">Start Recogninzing</button>
+        <div class="open__message open__text open__message--success">Banker Recognition Done</div>
+    </div>
+
+    <div class=" open__recognize--add">
+        <img src="svg/plus-rec.svg" alt="add logo" class="open__logo">
+    </div>
+
+    <div class="open__recognize open__recognize--right hidden">
+        <div class="open__text--medium">User Face Recognition</div>
+        <div class="open__camera">
+            <img src="svg/video-camera.svg" alt="video logo" class="open__logo open__camera--initial">
+        </div>
+        <button class="btn open__btn">Start Recogninzing</button>
+        <div class="open__message open__text open__message--success">User recognition done</div>
+    </div>
+-->
+    <div class="line-break full-span"></div>
+    <div class="open__recognize-success open__text hidden">Recognition done opening
+        locker
+    </div>
+
+</section>
+
+<script src="js/open.js"></script>

@@ -1,0 +1,108 @@
+<% layout('layout/boilerplate') %>
+<section class="user">
+    <div class="account__heading">Add new user</div>
+    <!-- <div class="account__line-break line-break"></div> -->
+    <form action="/add/<%= lockerID %>" method="post" enctype="multipart/form-data" class="user__form"
+        data-lcr="<%= lockerID %>">
+        <div class="user__form-heading heading__secondary">Primary User Data</div>
+        <div class="user__form-line line-break white"></div>
+        <input type="text" class="hidden" value="<%= lockerID %>">
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_first" id="p_first" placeholder="First Name" required>
+            <label for="p_first" class="user__label">First Name</label>
+
+        </div>
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_middle" id="p_middle" placeholder="Middle Name">
+            <label for="p_middle" class="user__label">Middle Name</label>
+
+        </div>
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_last" id="p_last" placeholder="Last Name" required>
+            <label for="p_last" class="user__label">Last Name</label>
+
+        </div>
+        <div class="user__item user__address">
+            <input type="text" class="user__input" name="p_address" id="p_address" placeholder="Address" required>
+            <label for="p_address" class="user__label">Address</label>
+        </div>
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_city" id="p_city" placeholder="City" required>
+            <label for="p_city" class="user__label">City</label>
+        </div>
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_state" id="p_state" placeholder="State" required>
+            <label for="p_state" class="user__label">State</label>
+        </div>
+        <div class="user__item">
+            <input type="text" class="user__input" name="p_country" id="p_country" placeholder="Country" required>
+            <label for="p_country" class="user__label">Country</label>
+        </div>
+        <div class="user__item user__image user__image-primary">
+            <div>
+                <label for="p_image" class="user__label margin-0"><img src="svg/file-add.svg" alt="add p_image"
+                        class="user__logo user__logo--big"></label>
+
+            </div>
+            <input type="file" name="image" id="p_image" class="user__input" accept="image/*">
+        </div>
+        <!-- <button class="btn user__form-btn">Add Secondary Account</button>
+                <button class="btn user__form-btn">Create Account</button> -->
+
+
+
+        <!-- Secondary user -->
+        <div class="user__form user__form--secondary hidden full-span">
+            <div class="user__form-heading heading__secondary user-secondary">
+                <div>Secondary User Data</div>
+                <div class="user__form-cancel">
+                    <div class="user__label">Cancel</div>
+                    <img src="svg/close.svg" alt="cancel logo" class="user__logo">
+                </div>
+            </div>
+            <div class="user__form-line line-break white"></div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_first" id="s_first" placeholder="First Name" required>
+                <label for="s_first" class="user__label">First Name</label>
+
+            </div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_middle" id="s_middle" placeholder="Middle Name" required>
+                <label for="s_middle" class="user__label">Middle Name</label>
+
+            </div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_last" id="s_last" placeholder="Last Name" required>
+                <label for="s_last" class="user__label">Last Name</label>
+
+            </div>
+            <div class="user__item user__address">
+                <input type="text" class="user__input" name="s_address" id="s_address" placeholder="Address" required>
+                <label for="s_address" class="user__label">Address</label>
+            </div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_city" id="s_city" placeholder="City" required>
+                <label for="s_city" class="user__label">City</label>
+            </div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_state" id="s_state" placeholder="State" required>
+                <label for="s_state" class="user__label">State</label>
+            </div>
+            <div class="user__item">
+                <input type="text" class="user__input" name="s_country" id="s_country" placeholder="Country" required>
+                <label for="s_country" class="user__label">Country</label>
+            </div>
+            <div class="user__item user__image user__image-secondary">
+                <div>
+                    <label for="s_image" class="user__label margin-0"><img src="svg/file-add.svg" alt="add s_image"
+                            class="user__logo user__logo--big"></label>
+
+                </div>
+                <input type="file" name="image" id="s_image" class="user__input" accept="image/*">
+            </div>
+        </div>
+        <button class="btn user__form-btn add__secondary-btn" type="button">Add Secondary Account</button>
+        <button class="btn user__form-btn">Create Account</button>
+    </form>
+</section>
+<script src="js/add.js"></script>
